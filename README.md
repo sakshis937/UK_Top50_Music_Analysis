@@ -78,19 +78,6 @@ The dataset contains daily snapshots of the UK Top 50 playlist.
 
 ---
 
-## 📷 Dashboard Screenshots
-
-### Overview Dashboard
-![Dashboard](assets/dashboard.png)
-
-### Artist Analysis
-![Artist Analysis](assets/artist_analysis.png)
-
-### Collaboration Network
-![Network](assets/network_graph.png)
-
----
-
 ## 💡 Key Insights
 
 - UK charts show strong domestic artist representation.
