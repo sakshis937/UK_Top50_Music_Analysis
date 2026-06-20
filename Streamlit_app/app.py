@@ -20,7 +20,7 @@ st.markdown("Analyze Spotify UK Top 50 Playlist Data")
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv("Dataset/Atlantic_United_Kingdom (1).csv")
+        df = pd.read_csv("Dataset/cleaned_atlantic_uk_top50.csv")
         return df
     except FileNotFoundError:
         st.error("Dataset file not found. Please check the file path.")
