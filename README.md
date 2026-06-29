@@ -1,161 +1,159 @@
-# 🎵 United Kingdom Top 50 Music Analysis
+🎵 UK Top 50 Music Analysis
 
-## 📌 Project Overview
+> A data analytics web application that analyzes the structure of Spotify's UK Top 50 playlist — built to support smarter artist signing, release strategy, and marketing decisions for Atlantic Recording Corporation.
 
-This project analyzes the structure of the UK Top 50 music playlist to understand artist dominance, collaboration trends, explicit content preferences, and release strategies in the UK music market.
-
-The analysis provides insights for Atlantic Recording Corporation to support:
-- Artist signing strategy
-- UK-specific marketing decisions
-- Release format optimization
-- Cross-border promotion planning
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=flat-square)
+![Analysis](https://img.shields.io/badge/Analysis-Spotify%20UK%20Top%2050-green?style=flat-square)
+![UI](https://img.shields.io/badge/UI-Streamlit-red?style=flat-square)
+![Type](https://img.shields.io/badge/Project-Individual%20Academic%20Project-lightgrey?style=flat-square)
 
 ---
 
-## 📂 Dataset Description
+## 📌 Problem Statement
 
-The dataset contains daily snapshots of the UK Top 50 playlist.
+Record labels struggle to make data-driven decisions about which artists to sign, what format to release music in, and how to target the UK market specifically. Manual chart tracking misses patterns in collaboration trends, explicit content performance, and release timing.
 
-### Features
-
-| Column | Description |
-|--------|-------------|
-| date | Playlist snapshot date |
-| position | Rank position (1–50) |
-| song | Song title |
-| artist | Artist name(s) |
-| popularity | Popularity score |
-| duration_ms | Track duration in milliseconds |
-| album_type | Single or Album |
-| total_tracks | Number of tracks in album |
-| is_explicit | Explicit content flag |
-| album_cover_url | Album artwork URL |
+This project analyzes **daily snapshots of the UK Spotify Top 50 playlist** and presents insights through an **interactive Streamlit dashboard** — designed for music industry executives and A&R teams at Atlantic Recording Corporation.
 
 ---
 
-## 📊 Key Performance Indicators (KPIs)
+## 👩‍💻 My Contribution — Sakshi Sharma
 
-- Artist Concentration Index
-- Unique Artist Count
-- Collaboration Ratio
-- Explicit Content Share
-- Single vs Album Ratio
-- Diversity Score
-- Content Variety Index
-- Top 5 Artist Share
+This is an **individual academic project**. I handled the full pipeline end-to-end:
 
----
-
-## 🔬 Methodology
-
-### 1. Data Cleaning
-- Missing value handling
-- Duplicate removal
-- Artist name standardization
-- Date conversion
-
-### 2. Artist Analysis
-- Artist dominance
-- Diversity measurement
-- Concentration index
-
-### 3. Collaboration Analysis
-- Solo vs collaborative tracks
-- Collaboration ratio
-- Artist network graph
-
-### 4. Content Analysis
-- Explicit vs clean content
-- Rank-based analysis
-
-### 5. Album Strategy Analysis
-- Single vs album comparison
-- Album size impact
-
-### 6. Duration Analysis
-- Track duration distribution
-- Duration vs popularity
+- **Data pipeline** — Collected, cleaned, and standardized daily UK Top 50 snapshot data including artist name normalization and date parsing
+- **Streamlit dashboard** — Designed and built the complete frontend in `app.py` including sidebar filters, KPI cards, and chart sections
+- **Artist analysis** — Built top artist bar chart, diversity score, and artist concentration index
+- **Collaboration & content analysis** — Explicit vs clean donut chart, album type breakdown, and duration vs popularity scatter
+- **KPI system** — 8 business KPIs tracking market competitiveness, content mix, and release format trends
 
 ---
 
-## 💡 Key Insights
+## 📊 Project Stats
 
-- UK charts show strong domestic artist representation.
-- Collaborations increase chart visibility.
-- Singles dominate playlist presence.
-- Explicit content performs differently across rank groups.
-- Artist concentration reveals market competitiveness.
-
----
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
-git clone https://github.com/sakshis937/UK_Top50_Music_Analysis.git
-cd UK_Top50_Music_Analysis
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run Streamlit app:
-
-```bash
-streamlit run app.py
-```
+| Metric | Value |
+|--------|-------|
+| Playlist | Spotify UK Top 50 |
+| Data Type | Daily chart snapshots |
+| Chart Positions | 1 – 50 |
+| KPIs Tracked | 8 |
+| Visualizations | 5 interactive charts |
+| Client | Atlantic Recording Corporation |
 
 ---
 
-## 🚀 Streamlit Deployment
+## 🖥️ Dashboard Sections
 
-Deploy on Streamlit Cloud:
+| Section | What It Shows |
+|---------|--------------|
+| 🎤 Artist Performance | Top 10 artists by chart appearances + popularity distribution |
+| 📊 Content & Format | Explicit vs clean split + Single vs Album breakdown |
+| ⏱️ Duration Analysis | Song length vs popularity scatter plot |
+| 🎵 Top Songs Table | Filterable full dataset sorted by popularity |
+| 🖼️ Album Covers | Visual preview of top charting tracks |
 
-1. Push project to GitHub
-2. Visit https://share.streamlit.io
-3. Connect GitHub repository
-4. Select `app.py`
-5. Click Deploy
+---
+
+## 📈 Key Performance Indicators (KPIs)
+
+| KPI | What It Measures |
+|-----|-----------------|
+| Artist Concentration Index | How much a few artists dominate the chart |
+| Unique Artist Count | Total distinct artists on the playlist |
+| Collaboration Ratio | % of tracks with featured artists |
+| Explicit Content Share | % of explicit vs clean songs |
+| Single vs Album Ratio | Release format distribution |
+| Diversity Score | Overall chart variety index |
+| Content Variety Index | Mix of content types across the chart |
+| Top 5 Artist Share | Top 5 artists' combined % of total chart |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- NetworkX
-- Streamlit
+| Layer | Tools |
+|-------|-------|
+| Language | Python 3.10 |
+| Data | Pandas, NumPy |
+| Visualisation | Plotly, Matplotlib, Seaborn |
+| Network Graph | NetworkX |
+| Word Cloud | WordCloud |
+| Dashboard | Streamlit |
+
+---
+
+## 📂 Input Features
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `date` | `datetime` | Playlist snapshot date |
+| `position` | `int` | Chart rank position (1–50) |
+| `song` | `str` | Song title |
+| `artist` | `str` | Artist name(s) |
+| `popularity` | `int` | Spotify popularity score (0–100) |
+| `duration_ms` | `int` | Track duration in milliseconds |
+| `album_type` | `str` | Single or Album |
+| `total_tracks` | `int` | Number of tracks in the release |
+| `is_explicit` | `bool` | Explicit content flag |
+| `album_cover_url` | `str` | Album artwork URL |
+
+---
+
+## 📁 Project Structure
+
+```
+UK_Top50_Music_Analysis/
+│
+├── Streamlit_app/
+│   └── app.py                           # Main Streamlit dashboard
+│
+├── Dataset/
+│   └── cleaned_atlantic_uk_top50.csv    # Cleaned UK Top 50 playlist data
+│
+├── requirements.txt                     # Python dependencies
+└── README.md                            # Project documentation
+```
+
+---
+
+## 🚀 How to Run Locally
+
+```bash
+# 1. Clone the repo
+git clone https://github.com/sakshis937/UK_Top50_Music_Analysis.git
+cd UK_Top50_Music_Analysis
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Launch the app
+streamlit run Streamlit_app/app.py
+```
+
+---
+
+## 💡 Key Insights
+
+- 🇬🇧 UK charts show **strong domestic artist representation**, reflecting local listener preferences
+- 🤝 **Collaborations significantly increase chart visibility** — featured tracks outperform solo releases
+- 💿 **Singles dominate** playlist presence, indicating a shift toward shorter, accessible music formats
+- 🔞 **Explicit content performs differently** across rank groups, reflecting UK cultural nuances
+- 📊 **Artist concentration metrics** reveal the competitiveness and openness of the UK music market
+
+---
+
+## 💡 Key Learnings
+
+- Chart data contains rich signals about listener behavior that go beyond just popularity scores
+- Sidebar filters dramatically improve usability when presenting data to non-technical stakeholders
+- Plotly's interactivity adds significant value over static Matplotlib charts for business dashboards
 
 ---
 
 ## 👩‍💻 Author
 
 **Sakshi Sharma**
-
-GitHub: https://github.com/sakshis937
+GitHub: [sakshis937](https://github.com/sakshis937)
 
 ---
-# Executive Summary
-
-The United Kingdom music industry plays a significant role in shaping global entertainment trends. This study analyzes the UK Top 50 playlist to understand market structure, artist diversity, collaboration patterns, and content composition.
-
-The findings reveal that the UK market exhibits balanced artist representation with a strong presence of collaborative tracks. Singles continue to dominate playlist rankings, suggesting changing listener behavior favoring shorter and more accessible music formats.
-
-The analysis also highlights differences in explicit content performance, reflecting cultural preferences within the UK audience. These insights can support policymakers and industry stakeholders in promoting cultural diversity, supporting domestic artists, and encouraging innovation in the creative economy.
-
-Key recommendations include:
-
-* Supporting initiatives that encourage artist collaborations.
-* Promoting domestic talent to maintain cultural representation.
-* Developing policies that balance creative freedom with audience sensitivities.
-* Encouraging data-driven strategies within the music industry.
-
-This study demonstrates how analytics can provide valuable intelligence for strategic decision-making in the UK's creative sector.
-
