@@ -4,3 +4,6 @@ plotly
 numpy
 matplotlib
 networkx
+seaborn
+wordcloud
+statsmodels
