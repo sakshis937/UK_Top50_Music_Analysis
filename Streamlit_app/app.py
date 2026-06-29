@@ -489,7 +489,6 @@ if 'duration_min' in filtered_df.columns:
         hover_data=['song', 'artist'] if 'song' in filtered_df.columns else None,
         title="Does song length affect popularity?",
         color_discrete_sequence=ACCENT_COLORS,
-        trendline="ols" if len(filtered_df) > 5 else None,
     )
     fig5 = style_fig(fig5, height=360)
     st.markdown('<div class="chart-container">', unsafe_allow_html=True)
