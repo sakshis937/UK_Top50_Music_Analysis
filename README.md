@@ -8,6 +8,9 @@
 ![UI](https://img.shields.io/badge/UI-Streamlit-red?style=flat-square)
 ![Type](https://img.shields.io/badge/Project-Individual%20Academic%20Project-lightgrey?style=flat-square)
 
+🔗 **Live Demo:** https://uktop50musicanalysis-twzbytr8e7hiyt4blqjtpf.streamlit.app/
+
+
 ---
 
 ## 📌 Problem Statement
